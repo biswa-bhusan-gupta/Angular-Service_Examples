@@ -1,0 +1,13 @@
+<div>
+  <h1>
+    {{ component }}
+  </h1>
+  <app-server (accountAdd)="accountAdded($event)"></app-server>
+  <hr>
+  <app-card
+    *ngFor="let acc of accounts;let i = index"
+    [account]="acc"
+    [id]="i
+    (updateStatus)="changeStatus($event)"
+  ></app-card>
+</div>
